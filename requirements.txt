@@ -1,0 +1,5 @@
+fastapi
+uvcorn
+pylint
+pytest
+httpx
