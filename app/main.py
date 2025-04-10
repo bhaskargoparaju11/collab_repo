@@ -1,7 +1,11 @@
+"""Main FastAPI application."""
+
 from fastapi import FastAPI
 
 app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
+    """Handle root GET request."""
+    return {"message": "Hello, FastAPI!"}
+
