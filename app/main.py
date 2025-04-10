@@ -8,4 +8,3 @@ app = FastAPI()
 def read_root():
     """Handle root GET request."""
     return {"message": "Hello, FastAPI!"}
-
