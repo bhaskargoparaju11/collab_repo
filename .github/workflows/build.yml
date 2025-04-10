@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          pip install pylint pytest
+          pip install pylint pytest build
 
       - name: Lint with pylint
         run: pylint app tests
