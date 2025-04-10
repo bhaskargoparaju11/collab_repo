@@ -28,14 +28,12 @@ jobs:
       - name: Run tests
         run: PYTHONPATH=. pytest
 
-      - name: Build package (only on main)
-        if: github.ref == 'refs/heads/main'
+      - name: Build package
         run: |
-          python setup.py sdist bdist_wheel
+          python -m build
 
-      - name: Upload package
-        if: github.ref == 'refs/heads/main'
+      - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: fastapi-package
+          name: my-artifact
           path: dist/*
