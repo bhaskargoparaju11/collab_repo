@@ -9,4 +9,4 @@ def test_read_root():
     """Test the root endpoint response."""
     response = client.get("/")
     assert response.status_code == 200
-    assert response.json() == {"message": "Hello, Bhaskar I've made changes!"}
+    assert response.json() == {"message": "Hello, Bhaskar I have  made changes!"}
